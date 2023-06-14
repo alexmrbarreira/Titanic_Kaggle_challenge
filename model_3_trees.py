@@ -8,39 +8,7 @@ import pickle
 # Load data
 # ======================================================== 
 
-df_train = pd.read_csv('data_store/data_my_train.csv')
-df_valid = pd.read_csv('data_store/data_my_valid.csv')
-
-# Training/validation features (passenger characteristics)
-data_train_features = df_train.drop(['PassengerId', 'Survived'], axis = 1)
-data_valid_features = df_valid.drop(['PassengerId', 'Survived'], axis = 1)
-print ('')
-print ('Training with the folowing columns ... ')
-print (data_train_features.columns.tolist())
-data_train_features = data_train_features.values
-data_valid_features = data_valid_features.values
-
-# Training/validation labels (survived or not)
-data_train_labels = df_train[['Survived']].values
-data_valid_labels = df_valid[['Survived']].values
-
-N_features = np.shape(data_train_features)[1]
-N_train    = len(data_train_labels)
-N_valid    = len(data_valid_labels)
-
-# Normalize features by their max
-for i in range(N_features):
-    data_train_features[:,i] /= max(data_train_features[:,i])
-for i in range(N_features):
-    data_valid_features[:,i] /= max(data_valid_features[:,i])
-
-print ('')
-print ('Shape of training data:')
-print ('Features:', np.shape(data_train_features))
-print ('Labels:', np.shape(data_train_labels))
-print ('Shape of validation data:')
-print ('Features:', np.shape(data_valid_features))
-print ('Labels:', np.shape(data_valid_labels))
+df_train, df_valid, data_train_features, data_valid_features, data_train_labels, data_valid_labels, N_features, N_train, N_valid = load_training_data() # function defined in commons.py
 
 # ======================================================== 
 # Build and train decision tree model
@@ -125,12 +93,7 @@ plt.show()
 # Make prediction for Kaggle test
 # ========================================================
 
-df_test            = pd.read_csv('data_store/data_modified_test.csv')
-N_test             = df_test.shape[0]
-pid                = df_test['PassengerId'].values
-data_test_features = df_test.drop(['PassengerId'], axis = 1).values
-for i in range(N_features):
-    data_test_features[:,i] /= max(data_test_features[:,i])
+df_test, data_test_features, N_test, pid = load_test_data() # function defined in commons.py
 
 prediction_decision_tree_test = model_decision_tree.predict(data_test_features)
 prediction_random_forest_test = model_random_forest.predict(data_test_features)

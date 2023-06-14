@@ -90,6 +90,7 @@ def load_test_data():
     N_test             = df_test.shape[0]
     pid                = df_test['PassengerId'].values
     data_test_features = df_test.drop(['PassengerId'], axis = 1).values
+    N_features = np.shape(data_test_features)[1]
     for i in range(N_features):
         data_test_features[:,i] /= max(data_test_features[:,i])
     return df_test, data_test_features, N_test, pid
