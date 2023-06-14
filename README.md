@@ -52,3 +52,12 @@ This figure plots the correlation matrix of the passenger features.
 
 ## Results overview
 
+The accuracy of the models on the validation sets are as follows:
+
+By hand model 1 "Save all female"                      : 0.796
+By hand model 1 "Save all female and all male age < 9" : 0.799
+
+
+
+
+
