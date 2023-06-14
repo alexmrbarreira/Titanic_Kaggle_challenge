@@ -12,7 +12,26 @@ These scripts serve as a basic starting point to explore more elaborate data cle
 ### Dependencies
 
 - numpy, scipy and matplotlib
+- pandas
 - tensorflow
 - scikit-learn
 
 ### Script overview
+
+To run the whole pipeline, execute as follows:
+
+*python prepare_training_data.py ; python plot_data_trends.py ; python model_1_byhand.py ; python model_2_dnn.py ; python model_3_trees.py ; python plot_features_importances.py*
+
+#### prepare_training_data.py
+
+#### model_1_byhand.py
+
+#### model_2_dnn.py
+
+#### model_3_trees.py
+
+#### plot_data_trends.py
+
+#### plot_features_importances.py
+
+#### prepare_training_data.py
