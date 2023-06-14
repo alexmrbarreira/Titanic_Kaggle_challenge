@@ -30,7 +30,7 @@ This prepares the Kaggle dataset for learning: (i) it numerically encodes featur
 This plots some basic data trends such as the number of passengers and survive probability as a function of the various features. It plots also the correlation matrix of the features.
 
 #### model_1_byhand.py
-This defines a couple of prediction models built by hand from visualy inspecting the basic data trends. Eg., a model where all female survive, or a model where also all male under the age of 9 also survive. It checks the performance of the models on the validation set, and also prepares the file for the Kaggle submission.
+This defines a couple of prediction models built by hand from visually inspecting the basic data trends. Eg., a model where all female survive, or a model where also all male under the age of 9 also survive. It checks the performance of the models on the validation set, and also prepares the file for the Kaggle submission.
 
 #### model_2_dnn.py
 This defines a fully connected neural network model (4 hidden layers), trains it and checks its performance on the validation set. It also prepares the file for the Kaggle submission.
