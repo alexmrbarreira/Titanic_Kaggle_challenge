@@ -25,13 +25,15 @@ To run the whole pipeline, execute as follows:
 #### prepare_training_data.py
 This prepares the Kaggle dataset for learning: (i) it numerically encodes features such as gender and embarcation point, (ii) deals with NaN in the data, (iii) constructs new composite features, (iv) splits into 70% training and 30% validation sets.
 
+#### plot_data_trends.py
+This plots some basic data trends such as the number of passengers and survive probability as a function of the various features. It plots also the correlation matrix of the features.
+
 #### model_1_byhand.py
+This defines a couple of prediction models built by hand from visualy inspecting the basic data trends. Eg., a model where all female survive, or a model where also all male under the age of 9 also survive. It checks the performance of the models on the validation set.
 
 #### model_2_dnn.py
 
 #### model_3_trees.py
-
-#### plot_data_trends.py
 
 #### plot_features_importances.py
 
