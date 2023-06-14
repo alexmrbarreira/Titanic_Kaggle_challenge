@@ -52,12 +52,13 @@ This figure plots the correlation matrix of the passenger features.
 
 ## Results overview
 
-The accuracy of the models on the validation sets are as follows (note these values may change slightly if trained again):
+The accuracy of the models on the validation set are as follows (note these values may change slightly if trained again):
 
 | Save all female | Same all female and young male | Neural network | Decision tree | Random forest|
 | :-------------: | :----------------------------: | :------------: | :-----------: | :----------: |
 |      0.796      |              0.799             |      0.839     |     0.681     |     0.803    |  
 
+The neural network is the model that performs the best, followed by the random forest. It is interesting that the simple decision tree could not outperform the basic model saving all female. The model saving all female and young male (age < 9) was inspired by the plot above that shows that children had a higher chance of survival, but this gives only marginal improvement.
 
 
 
