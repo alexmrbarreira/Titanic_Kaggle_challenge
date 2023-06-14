@@ -7,6 +7,7 @@ These scripts serve as a basic starting point to explore more elaborate data cle
 ## Table of contents
 - [Dependencies](#dependencies)
 - [Script overview](#script-overview)
+- [Data overview](#data-overview)
 - [Results overview](#results-overview)
 
 ## Dependencies
@@ -40,7 +41,7 @@ This defines a decision tree and random forest classifier models, trains them an
 #### plot_features_importances.py
 This runs a series of feature importance simulations for the neural network (model_2) and tree-based (model_3) models. The feature importance is worked out by randomizing each of the passenger features; the numerical value of the importance is the inverse of the accuracy degradation after ramdomization.
 
-## Results overview
+## Data overview
 
 This figure plots the number of passengers (green bars) and survival probability (orange lines) as a function of the passenger features. The solid, dashed and green orange lines are for the whole data set, the training set and the validation set, respectively.
 ![](./fig_store/fig_data_trends_distributions.png)
@@ -48,4 +49,6 @@ This figure plots the number of passengers (green bars) and survival probability
 This figure plots the correlation matrix of the passenger features.
 
 ![](./fig_store/fig_data_trends_covariance.png)
+
+## Results overview
 
