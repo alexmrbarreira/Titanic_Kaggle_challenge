@@ -29,12 +29,13 @@ This prepares the Kaggle dataset for learning: (i) it numerically encodes featur
 This plots some basic data trends such as the number of passengers and survive probability as a function of the various features. It plots also the correlation matrix of the features.
 
 #### model_1_byhand.py
-This defines a couple of prediction models built by hand from visualy inspecting the basic data trends. Eg., a model where all female survive, or a model where also all male under the age of 9 also survive. It checks the performance of the models on the validation set.
+This defines a couple of prediction models built by hand from visualy inspecting the basic data trends. Eg., a model where all female survive, or a model where also all male under the age of 9 also survive. It checks the performance of the models on the validation set, and also prepares the file for the Kaggle submission.
 
 #### model_2_dnn.py
+This defines a fully connected neural network model, trains it and checks its performance on the validation set. It also prepares the file for the Kaggle submission.
 
 #### model_3_trees.py
+This defines a decision tree and random forest classifier models, trains them and check their performance on the validation set. It also prepares the file for the Kaggle submission.
 
 #### plot_features_importances.py
-
-#### prepare_training_data.py
+This runs a series of feature importance simulations for the neural network (model_2) and tree-based (model_3) models. The feature importance is worked out by randomizing each of the passenger features; the numerical value of the importance is the inverse of the accuracy degradation after ramdomization.
