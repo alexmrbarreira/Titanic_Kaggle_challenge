@@ -52,10 +52,17 @@ This figure plots the correlation matrix of the passenger features.
 
 ## Results overview
 
-The accuracy of the models on the validation sets are as follows:
+The accuracy of the models on the validation sets are as follows (note these values may change slightly if trained again):
 
-By hand model 1 "Save all female"                      : 0.796
-By hand model 1 "Save all female and all male age < 9" : 0.799
+Simple model that saves all female : 0.796
+
+Simple model that saves all female and all male young than 9: 0.799
+
+Neural network: 0.839
+
+Decision tree: 0.681
+
+Random forest: 0.803
 
 
 
