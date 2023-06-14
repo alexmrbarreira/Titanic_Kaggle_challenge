@@ -33,7 +33,7 @@ This plots some basic data trends such as the number of passengers and survive p
 This defines a couple of prediction models built by hand from visualy inspecting the basic data trends. Eg., a model where all female survive, or a model where also all male under the age of 9 also survive. It checks the performance of the models on the validation set, and also prepares the file for the Kaggle submission.
 
 #### model_2_dnn.py
-This defines a fully connected neural network model, trains it and checks its performance on the validation set. It also prepares the file for the Kaggle submission.
+This defines a fully connected neural network model (4 hidden layers), trains it and checks its performance on the validation set. It also prepares the file for the Kaggle submission.
 
 #### model_3_trees.py
 This defines a decision tree and random forest classifier models, trains them and check their performance on the validation set. It also prepares the file for the Kaggle submission.
@@ -59,6 +59,22 @@ The accuracy of the models on the validation set are as follows (note these valu
 |      0.796      |              0.799             |      0.839     |     0.681     |     0.803    |  
 
 The neural network is the model that performs the best, followed by the random forest. It is interesting that the simple decision tree could not outperform the basic model saving all female. The model saving all female and young male (age < 9) was inspired by the plot above that shows that children had a higher chance of survival, but this gives only marginal improvement.
+
+The accuracy of the models on the Kaggle test set are as follows:
+
+| Save all female | Same all female and young male | Neural network | Decision tree | Random forest|
+| :-------------: | :----------------------------: | :------------: | :-----------: | :----------: |
+|      0.766      |              0.766             |      0.801     |     0.665     |     0.739    |  
+
+The situation is similar to the accuracy on the validation set, with the neural network remaining the best model. Overall though, the performance of all models worsens on the test set, compared to the validation set. This may be an indication that the test set isn't as representative of the passenger population as the chosen validation set. 
+
+This figure shows the feature importances of the decision tree (blue), random forest (green) and neural network (red). The upper panels show the feature importance measured on the training set, i.e., the accuracy loss on the training set from randomizing each feature. The lower panels show the same for the validation set.
+
+![](./fig_store/fig_feature_importances.png)
+
+The feature importances of the neural network are very similar in the training and validation sets. This is not the case in the tree based models. In the training set, there are features with a relatively sizeable importance (eg., fare, age, characters in name for the decision tree model), but this is because the models are overfitting the training data (training accuracy of 1.0). Both tree-based models show a much reduced feature importance on the validation set.
+
+Overall, all models predict that sex is a major predictive factor in the survival probability, followed next by the ticket class. Interestingly, ticket class and ticket fare are two features that are quite anti-correlated (see figure above; if the class decreases from 3rd to 1st, the fare increases), but the neural network assigned nonetheless much more importance to the class than the fare.
 
 
 
