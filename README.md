@@ -64,9 +64,9 @@ Decision tree: 0.681
 
 Random forest: 0.803
 
-| Save all female  | Same all female and young male | Neural network | Decision tree | Random forest
-| ------------- | ------------- |
-|    0.796      | Content Cell  |
+| Save all female  | Same all female and young male | Neural network | Decision tree | Random forest|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+|    0.796      | 0.799  | 0.839 | 0.681 | 0.803 |  
 
 
 
