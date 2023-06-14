@@ -23,7 +23,7 @@ To run the whole pipeline, execute as follows:
 *python prepare_training_data.py ; python plot_data_trends.py ; python model_1_byhand.py ; python model_2_dnn.py ; python model_3_trees.py ; python plot_features_importances.py*
 
 #### prepare_training_data.py
-This prepares the Kaggle dataset for learning: (i) it numerically encodes features such as gender and embarcation point, (ii) deals with NaN in the data, (iii) constructs new composite features, (iv) splits into 70%/30% training/validation sets.
+This prepares the Kaggle dataset for learning: (i) it numerically encodes features such as gender and embarcation point, (ii) deals with NaN in the data, (iii) constructs new composite features, (iv) splits into 70% training and 30% validation sets.
 
 #### model_1_byhand.py
 
