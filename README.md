@@ -4,7 +4,7 @@ Simple set of scripts with a simple approach to the famous Kaggle Titanic Challe
 
 These scripts serve as a basic starting point to explore more elaborate data cleaning and modeling approaches. They compare three different modeling approaches: (i) models built "by hand" after visually inspecting basic data trends, (ii) a dense neural network and (iii) decision tree and random forest classifiers.
 
-### Table of contents
+## Table of contents
 - [Dependencies](#dependencies)
 - [Script overview](#script-overview)
 - [Results overview](#results-overview)
