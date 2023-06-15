@@ -4,11 +4,9 @@ Simple set of python scripts with an example approach to the famous Kaggle Titan
 
 These scripts serve as a basic starting point to explore more elaborate data cleaning and modeling approaches. They compare three different modeling approaches, namely: 
 
--models built "by hand" after visually inspecting basic data trends; 
-
-- a dense neural network;
-
-- decision tree and random forest classifiers.
+1. models built "by hand" after visually inspecting basic data trends; 
+2. a dense neural network;
+3. decision tree and random forest classifiers.
 
 ## Table of contents
 - [Dependencies](#dependencies)
