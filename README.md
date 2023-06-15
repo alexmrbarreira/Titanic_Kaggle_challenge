@@ -4,8 +4,8 @@ Simple set of python scripts with an example approach to the famous Kaggle Titan
 
 These scripts serve as a basic starting point to explore more elaborate data cleaning and modeling approaches. They compare three different modeling approaches, namely: 
 
-1. models built "by hand" after visually inspecting basic data trends; 
-2. a dense neural network;
+1. models built "by hand" from visually inspecting basic data trends; 
+2. a fully-connected dense neural network;
 3. decision tree and random forest classifiers.
 
 ## Table of contents
@@ -28,7 +28,7 @@ To run the whole pipeline, execute as follows:
 *python prepare_training_data.py ; python plot_data_trends.py ; python model_1_byhand.py ; python model_2_dnn.py ; python model_3_trees.py ; python plot_features_importances.py*
 
 #### prepare_training_data.py
-This prepares the Kaggle dataset for learning: (i) it numerically encodes features such as gender and embarcation point, (ii) deals with NaN in the data, (iii) constructs new composite features, (iv) splits into 70% training and 30% validation sets.
+This prepares the Kaggle dataset for learning: (i) it numerically encodes features such as gender and embarcation point, (ii) deals with NaN in the data, (iii) engineers new features, (iv) splits into 70% training and 30% validation sets.
 
 #### plot_data_trends.py
 This plots some basic data trends such as the number of passengers and survive probability as a function of the various features. It plots also the correlation matrix of the features.
