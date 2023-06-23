@@ -1,4 +1,4 @@
-# Titanic_Kaggle_challenge
+# Titanic Kaggle challenge
 
 Set of python scripts with an example approach to the famous Kaggle Titanic Challenge. The challenge consists of predicting whether different passengers survive based on characteristics such as age, sex, ticket fare, etc. See the [Kaggle website](https://www.kaggle.com/competitions/titanic.) for more details.
 
